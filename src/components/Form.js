@@ -32,22 +32,32 @@ class Form extends Component {
         />);
     return (
       <form className="forme">
+        <label htmlFor='cardName'>
+          nome:
+          <br />
         <input
           type="text"
           data-testid="name-input"
+          id='cardName'
           name="cardName"
           value={ cardName }
           onChange={ onInputChange }
           onClick={ onInputChange }
         />
+        </label>
 
+        <label htmlFor='cardDescription'>
+          descrição:
+          <br />
         <textarea
           data-testid="description-input"
+          id='cardDescription'
           name="cardDescription"
           value={ cardDescription }
           onChange={ onInputChange }
           onClick={ onInputChange }
         />
+        </label>
 
         <input
           type="number"
@@ -66,7 +76,6 @@ class Form extends Component {
           onClick={ onInputChange }
           onChange={ onInputChange }
         />
-
         <input
           type="number"
           data-testid="attr3-input"

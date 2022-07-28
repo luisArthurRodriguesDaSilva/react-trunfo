@@ -30,12 +30,12 @@ class Card extends Component {
               alt={ cardName }
             />
           </div>
-          <h2 data-testid="name-card">{cardName}</h2>
+          <h3 class="name-card" data-testid="name-card">{cardName}</h3>
           <h4 data-testid="rare-card">{cardRare}</h4>
           <p data-testid="description-card">{cardDescription}</p>
-          <h4 data-testid="attr1-card">{cardAttr1}</h4>
-          <h4 data-testid="attr2-card">{cardAttr2}</h4>
-          <h4 data-testid="attr3-card">{cardAttr3}</h4>
+          <div><p>Força: </p><h4 data-testid="attr1-card">{cardAttr1}</h4></div>
+          <div><p>Agilidade:</p><h4 data-testid="attr2-card">{cardAttr2}</h4></div>
+          <div><p>sla: </p><h4 data-testid="attr3-card">{cardAttr3}</h4></div>
           {st}
         </div>
       </div>
