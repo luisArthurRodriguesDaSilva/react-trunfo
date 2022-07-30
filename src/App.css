@@ -1,7 +1,11 @@
-#root > div{
+  #root > div{
   display: flex;
   flex-direction: column;
   align-items: center;
+  }
+
+  body{
+    background:;
   }
   
   .tope{

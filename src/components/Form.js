@@ -21,7 +21,10 @@ class Form extends Component {
     const ine = (jaFoi)
       ? (<p>Você já tem um Super Trunfo em seu baralho</p>)
       : (
+        <label htmlFor='cardTrunfoCheckbox'>
+          trunfo:
         <input
+          id="cardTrunfoCheckbox"
           type="checkbox"
           data-testid="trunfo-input"
           name="cardTrunfo"
@@ -29,7 +32,9 @@ class Form extends Component {
           value={ cardTrunfo }
           onChange={ onInputChange }
           onClick={ onInputChange }
-        />);
+        />
+        </label>
+        );
     return (
       <form className="forme">
         <label htmlFor='cardName'>
@@ -59,7 +64,11 @@ class Form extends Component {
         />
         </label>
 
+        <label htmlFor='cardAttr1Inp'>
+          Força:
+          <br />
         <input
+          id='cardAttr1Inp'
           type="number"
           data-testid="attr1-input"
           name="cardAttr1"
@@ -67,8 +76,13 @@ class Form extends Component {
           onClick={ onInputChange }
           onChange={ onInputChange }
         />
+        </label>
 
+        <label htmlFor='cardAttr2Inp'>
+          Agilidade:
+          <br />
         <input
+          id='cardAttr2Inp'
           type="number"
           data-testid="attr2-input"
           name="cardAttr2"
@@ -76,7 +90,13 @@ class Form extends Component {
           onClick={ onInputChange }
           onChange={ onInputChange }
         />
+        </label>
+        
+        <label htmlFor='cardAttr3Inp'>
+          Força:
+          <br />
         <input
+          id='cardAttr3Inp'
           type="number"
           data-testid="attr3-input"
           name="cardAttr3"
@@ -84,10 +104,13 @@ class Form extends Component {
           onClick={ onInputChange }
           onChange={ onInputChange }
         />
+        </label>
 
         {ine}
-
+      <label htmlFor='imgInp'>
+        imagem:
         <input
+          id='imgInp'
           type="text"
           data-testid="image-input"
           name="cardImage"
@@ -95,6 +118,8 @@ class Form extends Component {
           onChange={ onInputChange }
           onClick={ onInputChange }
         />
+        </label>
+        
 
         <select
           type="checkbox"
