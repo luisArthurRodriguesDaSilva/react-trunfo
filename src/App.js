@@ -100,8 +100,8 @@ class App extends React.Component {
     const [c1, c2, c3] = [Number(cardAttr1), Number(cardAttr2), Number(cardAttr3)];
 
     const sum = c1 + c2 + c3;
-    const maxS = 210;
-    const maxB = 90;
+    const maxS = 333;
+    const maxB = 111;
 
     return (cardName === ''
       || cardDescription === ''
@@ -183,9 +183,9 @@ class App extends React.Component {
             jaFoi={ jaFoi }
             cardTrunfo={ cardTrunfo }
             cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
+            cardAttr1={ parseInt(cardAttr1%100,10) }
+            cardAttr2={ parseInt(cardAttr2%100,10)  }
+            cardAttr3={ parseInt(cardAttr3%100,10)  }
             cardImage={ cardImage }
             cardRare={ cardRare }
             onInputChange={ this.onInputChange }
@@ -196,9 +196,9 @@ class App extends React.Component {
             className="mainCardContainer"
             cardName={ cardName }
             cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
+            cardAttr1={ parseInt(cardAttr1%100,10) }
+            cardAttr2={ parseInt(cardAttr2%100,10) }
+            cardAttr3={ parseInt(cardAttr3%100,10) }
             cardImage={ cardImage }
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
