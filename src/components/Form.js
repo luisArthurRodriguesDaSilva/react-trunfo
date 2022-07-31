@@ -19,10 +19,11 @@ class Form extends Component {
     } = this.props;
 
     const ine = (jaFoi)
-      ? (<p>Você já tem um Super Trunfo em seu baralho</p>)
+      ? ( <p id='trunfo-confirmed'>Você já tem um Super Trunfo em seu baralho</p>)
       : (
-        <label htmlFor='cardTrunfoCheckbox'>
+        <label htmlFor='cardTrunfoCheckbox' className='container'>
           trunfo:
+          <br />
         <input
           id="cardTrunfoCheckbox"
           type="checkbox"
@@ -33,114 +34,131 @@ class Form extends Component {
           onChange={ onInputChange }
           onClick={ onInputChange }
         />
+        <span className='checkmark'></span>
         </label>
         );
     return (
       <form className="forme">
-        <label htmlFor='cardName'>
-          nome:
-          <br />
-        <input
-          type="text"
-          data-testid="name-input"
-          id='cardName'
-          name="cardName"
-          value={ cardName }
-          onChange={ onInputChange }
-          onClick={ onInputChange }
-        />
-        </label>
+        <div className='top-form'>
+          <label htmlFor='cardName' >
+            nome:
+            <br />
+          <input
+            type="text"
+            data-testid="name-input"
+            id='cardName'
+            name="cardName"
+            value={ cardName }
+            onChange={ onInputChange }
+            onClick={ onInputChange }
+          />
+          </label>
 
-        <label htmlFor='cardDescription'>
-          descrição:
-          <br />
-        <textarea
-          data-testid="description-input"
-          id='cardDescription'
-          name="cardDescription"
-          value={ cardDescription }
-          onChange={ onInputChange }
-          onClick={ onInputChange }
-        />
-        </label>
+          <label htmlFor='cardDescription'>
+            descrição:
+            <br />
+          <textarea
+            data-testid="description-input"
+            id='cardDescription'
+            name="cardDescription"
+            value={ cardDescription }
+            onChange={ onInputChange }
+            onClick={ onInputChange }
+          />
+          </label>
+        </div>
+        <div id='bottom-form'>
+          <div className='left-bottom-form'>
+            <label htmlFor='cardAttr1Inp'>
+              Força:
+              <br />
+            <input
+              id='cardAttr1Inp'
+              min = '0'
+              type="number"
+              data-testid="attr1-input"
+              name="cardAttr1"
+              value={ cardAttr1 }
+              onClick={ onInputChange }
+              onChange={ onInputChange }
+            />
+            </label>
 
-        <label htmlFor='cardAttr1Inp'>
-          Força:
-          <br />
-        <input
-          id='cardAttr1Inp'
-          type="number"
-          data-testid="attr1-input"
-          name="cardAttr1"
-          value={ cardAttr1 }
-          onClick={ onInputChange }
-          onChange={ onInputChange }
-        />
-        </label>
+            <label htmlFor='cardAttr2Inp'>
+              Agilidade:
+              <br />
+            <input
+              id='cardAttr2Inp'
+              min = '0'
+              type="number"
+              data-testid="attr2-input"
+              name="cardAttr2"
+              value={ cardAttr2 }
+              onClick={ onInputChange }
+              onChange={ onInputChange }
+            />
+            </label>
 
-        <label htmlFor='cardAttr2Inp'>
-          Agilidade:
-          <br />
-        <input
-          id='cardAttr2Inp'
-          type="number"
-          data-testid="attr2-input"
-          name="cardAttr2"
-          value={ cardAttr2 }
-          onClick={ onInputChange }
-          onChange={ onInputChange }
-        />
-        </label>
-        
-        <label htmlFor='cardAttr3Inp'>
-          Força:
-          <br />
-        <input
-          id='cardAttr3Inp'
-          type="number"
-          data-testid="attr3-input"
-          name="cardAttr3"
-          value={ cardAttr3 }
-          onClick={ onInputChange }
-          onChange={ onInputChange }
-        />
-        </label>
+            <label htmlFor='cardAttr3Inp'>
+              Força:
+              <br />
+            <input
+              id='cardAttr3Inp'
+              min = '0'
+              type="number"
+              data-testid="attr3-input"
+              name="cardAttr3"
+              value={ cardAttr3 }
+              onClick={ onInputChange }
+              onChange={ onInputChange }
+            />
+            </label>
 
-        {ine}
-      <label htmlFor='imgInp'>
-        imagem:
-        <input
-          id='imgInp'
-          type="text"
-          data-testid="image-input"
-          name="cardImage"
-          value={ cardImage }
-          onChange={ onInputChange }
-          onClick={ onInputChange }
-        />
-        </label>
-        
+            <label htmlFor='rarity-input'>
+              raridade:
+              <br />
+              <select
+                id='rarity-input'
+                type="checkbox"
+                data-testid="rare-input"
+                name="cardRare"
+                onChange={ onInputChange }
+                onClick={ onInputChange }
+                value={ cardRare }
+              >
+                <option value="normal">normal</option>
+                <option value="raro">raro</option>
+                <option value="muito raro">muito raro</option>
+              </select>
+            </label>
 
-        <select
-          type="checkbox"
-          data-testid="rare-input"
-          name="cardRare"
-          onChange={ onInputChange }
-          onClick={ onInputChange }
-          value={ cardRare }
-        >
-          <option value="normal">normal</option>
-          <option value="raro">raro</option>
-          <option value="muito raro">muito raro</option>
-        </select>
-        <button
-          type="button"
-          data-testid="save-button"
-          disabled={ isSaveButtonDisabled }
-          onClick={ onSaveButtonClick }
-        >
-          salvar
-        </button>
+          </div>
+          {ine}
+          <div className='right-bottom-form'>
+            <label htmlFor='imgInp'>
+            imagem:
+            <input
+              id='imgInp'
+              type="text"
+              data-testid="image-input"
+              name="cardImage"
+              value={ cardImage }
+              onChange={ onInputChange }
+              onClick={ onInputChange }
+            />
+            </label>
+
+            <button
+              id='save-button'
+              type="button"
+              data-testid="save-button"
+              disabled={ isSaveButtonDisabled }
+              onClick={ onSaveButtonClick }
+            >
+              salvar
+            </button>
+          </div>
+        </div>
       </form>
     );
   }

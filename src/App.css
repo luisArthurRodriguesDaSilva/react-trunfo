@@ -3,10 +3,6 @@
   flex-direction: column;
   align-items: center;
   }
-
-  body{
-    background:;
-  }
   
   .tope{
     display: flex;
@@ -26,7 +22,17 @@
   }
 
   .forme > *{
-    margin-left: 10px; ;
+    margin-left: 20px; ;
+    width: 90%;
+  }
+
+  .top-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #cardName{
     width: 90%;
   }
 
@@ -35,6 +41,20 @@
     height: 200px;
     width: 90%;
   }
+
+  #bottom-form{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-bottom-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    gap: 2px;
+  }
+
   
   .mainCardContainer {
     background-image: url('../images/dzplef60ake91.jpg');
