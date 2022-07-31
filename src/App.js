@@ -205,6 +205,7 @@ class App extends React.Component {
           />
         </div>
         <div className="boxDelLasSavas">
+          <div id="filters">
           <FilterName
             buscado={ buscado }
             onInputChange={ this.onInputChange }
@@ -219,6 +220,7 @@ class App extends React.Component {
             trunfoFilterMode={ trunfoFilterMode }
             onInputChange={ this.onInputChange }
           />
+          </div>
           {this.LasSavasShowadas()}
         </div>
       </div>
