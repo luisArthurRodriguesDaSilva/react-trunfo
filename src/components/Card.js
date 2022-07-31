@@ -16,7 +16,7 @@ class Card extends Component {
     } = this.props;
  
     const st = (cardTrunfo)
-      ? <img
+      ? <img 
           src='https://ajuda.growgames.com.br/attachments/token/EzaE2p10cvOcRwmxq9RJ9c1MP/?name=super_trunfo.png' 
           id="trunfo-alert" 
           data-testid="trunfo-card" 
