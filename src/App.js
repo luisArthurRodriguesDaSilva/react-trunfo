@@ -11,7 +11,7 @@ class App extends React.Component {
     super();
     this.state = {
       showedCards: [],
-      savedCards: [],
+      savedCards: JSON.parse(localStorage.getItem('save_cards')),
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -49,7 +49,10 @@ class App extends React.Component {
 
     this.setState((ps) => ({
       savedCards: [...ps.savedCards, card],
-    }));
+    }),()=>{
+      const stringfado = JSON.stringify(this.state.savedCards);
+    localStorage.setItem('save_cards',stringfado)
+  });
   }
 
   haveTrunfo = (savedCards) => (
@@ -115,7 +118,10 @@ class App extends React.Component {
   deletCard = (cardName) => {
     this.setState((ps) => ({
       savedCards: ps.savedCards.filter((carde) => (carde.cardName !== cardName)),
-    }));
+    }),()=>{
+      const stringfado = JSON.stringify(this.state.savedCards);
+    localStorage.setItem('save_cards',stringfado)
+  });
   }
 
   LasSavasShowadas = () => {
@@ -221,7 +227,7 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
           />
           </div>
-          {this.LasSavasShowadas()}
+          <div id='savedCardsContainer'>{this.LasSavasShowadas()}</div>
         </div>
       </div>
     );
