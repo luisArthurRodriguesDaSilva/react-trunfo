@@ -75,6 +75,7 @@ class Form extends Component {
             <input
               id='cardAttr1Inp'
               min = '0'
+              max = '100'
               type="number"
               data-testid="attr1-input"
               name="cardAttr1"
@@ -90,6 +91,7 @@ class Form extends Component {
             <input
               id='cardAttr2Inp'
               min = '0'
+              max = '100'
               type="number"
               data-testid="attr2-input"
               name="cardAttr2"
@@ -105,6 +107,7 @@ class Form extends Component {
             <input
               id='cardAttr3Inp'
               min = '0'
+              max = '100'
               type="number"
               data-testid="attr3-input"
               name="cardAttr3"

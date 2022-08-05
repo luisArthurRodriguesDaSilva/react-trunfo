@@ -5,14 +5,20 @@ class FilterName extends Component {
   render() {
     const { buscado, onInputChange, trunfoFilterMode } = this.props;
     return (
-      <input
-        disabled={ trunfoFilterMode }
-        type="text"
-        data-testid="name-filter"
-        name="buscado"
-        value={ buscado }
-        onChange={ onInputChange }
-      />
+    <>
+      <label htmlFor='nameFilter>'>
+        <input
+          disabled={ trunfoFilterMode }
+          placeholder="Buscar por ..."
+          id="nameFilter"
+          type="text"
+          data-testid="name-filter"
+          name="buscado"
+          value={ buscado }
+          onChange={ onInputChange }
+        />
+      </label>
+    </>
     );
   }
 }

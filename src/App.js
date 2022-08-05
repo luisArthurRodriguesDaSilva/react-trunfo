@@ -156,6 +156,7 @@ class App extends React.Component {
         <button
           type="button"
           data-testid="delete-button"
+          className='rmBtn'
           onClick={ () => this.deletCard(e.cardName) }
         >
           Excluir
@@ -189,9 +190,9 @@ class App extends React.Component {
             jaFoi={ jaFoi }
             cardTrunfo={ cardTrunfo }
             cardDescription={ cardDescription }
-            cardAttr1={ parseInt(cardAttr1%100,10) }
-            cardAttr2={ parseInt(cardAttr2%100,10)  }
-            cardAttr3={ parseInt(cardAttr3%100,10)  }
+            cardAttr1={ parseInt(cardAttr1%101,10) }
+            cardAttr2={ parseInt(cardAttr2%101,10)  }
+            cardAttr3={ parseInt(cardAttr3%101,10)  }
             cardImage={ cardImage }
             cardRare={ cardRare }
             onInputChange={ this.onInputChange }
@@ -202,9 +203,9 @@ class App extends React.Component {
             className="mainCardContainer"
             cardName={ cardName }
             cardDescription={ cardDescription }
-            cardAttr1={ parseInt(cardAttr1%100,10) }
-            cardAttr2={ parseInt(cardAttr2%100,10) }
-            cardAttr3={ parseInt(cardAttr3%100,10) }
+            cardAttr1={ parseInt(cardAttr1%101,10) }
+            cardAttr2={ parseInt(cardAttr2%101,10) }
+            cardAttr3={ parseInt(cardAttr3%101,10) }
             cardImage={ cardImage }
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
