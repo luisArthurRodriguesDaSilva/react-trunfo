@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+  *{
+    font-family: 'Comfortaa', cursive;
+  }
+
   body{
   overflow-x: hidden;
   }
@@ -96,7 +102,7 @@
     border-radius: 3px 3px 5px 5px;
   }
   
-  .mainCardContainer > div > p{
+  .mainCardContainer > div > p,.lasSavasCima > div > p{
     height: 50px;
     overflow-y: auto;
   }
@@ -203,5 +209,8 @@
   }
 
   .rmBtn{
-    margin:5px
+    margin:5px;
+    width: 100px;
+    height: 30px;
+    font-size: larger;
   }
