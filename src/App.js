@@ -11,7 +11,7 @@ class App extends React.Component {
     super();
     this.state = {
       showedCards: [],
-      savedCards: JSON.parse(localStorage.getItem('save_cards')),
+      savedCards: JSON.parse(localStorage.getItem('save_cards') || '[]'),
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -183,7 +183,7 @@ class App extends React.Component {
     const jaFoi = this.haveTrunfo(savedCards);
     return (
       <div>
-        <h1>Planet Trunfo</h1>
+        <h1>Your Trunfo</h1>
         <div className="tope">
           <Form
             cardName={ cardName }
