@@ -6,6 +6,9 @@
 
   body{
   overflow-x: hidden;
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)), url('../images/1255266.png');
+  background-position: 0% 0%;
+  background-size:500% ;
   }
 
   #root > div{
@@ -16,7 +19,15 @@
   min-height: 150vh;
   }
   
+  #title{
+  font-size: 2.5rem;
+  color: aliceblue;
+  }
+
   .tope{
+    background:linear-gradient(rgba(255,255,255,0.5), rgba(0, 0, 0, 0.5)), url('../images/PVi9HF.jpg');
+    background-size: cover;
+    background-position: 90% 50%;
     display: flex;
     width: 75vw;
     min-height: 350px;
@@ -27,10 +38,16 @@
   }
   
   .forme {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    border: 5px solid rgba(105, 105, 105, 0.479) ;
+    border-right: 2px solid rgb(127, 129, 4) ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 15px rgb(0, 0, 0);
   }
 
   .forme > *{
@@ -67,13 +84,34 @@
     gap: 2px;
   }
 
+  .right-bottom-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    gap: 2px;
+  }
+
+  #save-button{
+    width: 200px;
+    height: 100px;
+    align-self: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: rgba(127, 129, 4, 0.534);
+    color: white;
+    border-radius: 10px;
+  }
+
+  #save-button:hover{
+    background-color: rgb(127, 129, 4);
+    color: white;
+  }
   
   .mainCardContainer {
-    background-image: url('../images/dzplef60ake91.jpg');
-    background-size: cover;
-    background-position: 90% 50%;
-    
-    border: 1px solid rgb(0, 255, 221);
+    /*border: 1px solid rgb(0, 255, 221);*/
+    border: 5px solid rgba(105, 105, 105, 0.479) ;
+    border-left: 2px solid rgb(5, 75, 11) ;
     display: flex;
     flex-direction: column;
     align-items: center;

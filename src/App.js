@@ -183,7 +183,7 @@ class App extends React.Component {
     const jaFoi = this.haveTrunfo(savedCards);
     return (
       <div>
-        <h1>Your Trunfo</h1>
+        <h1 id="title">Seu Trunfo</h1>
         <div className="tope">
           <Form
             cardName={ cardName }

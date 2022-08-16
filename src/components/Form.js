@@ -158,7 +158,7 @@ class Form extends Component {
               disabled={ isSaveButtonDisabled }
               onClick={ onSaveButtonClick }
             >
-              salvar
+              salvar carta
             </button>
           </div>
         </div>
