@@ -140,7 +140,15 @@ class App extends React.Component {
     }
 
     return showadas.map((e) => (
-      <div key={ e.cardName } className="lasSavas">
+      <div
+      style={
+          {
+            backgroundColor:  `rgba(${1+e.cardAttr1}, ${1+ e.cardAttr2}, ${1 + e.cardAttr3},0.7)`,
+            border: `1px solid rgba(${e.cardAttr1}, ${e.cardAttr2}, ${e.cardAttr3},0.7)`,
+          } 
+        } 
+      key={ e.cardName } 
+      className="lasSavas">
         <Card
           key={ e.cardName }
           className="lasSavasCima"

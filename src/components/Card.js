@@ -25,7 +25,8 @@ class Card extends Component {
       : '';
 
     return (
-      <div className={ className }>
+      <div
+      className={ className }>
         <div>
           <div className="imageContainer">
             {(cardImage !== '') 

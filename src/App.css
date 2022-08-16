@@ -215,7 +215,7 @@
   }
   
   .lasSavas {
-    border: 2px solid blue;
+    border-radius: 10px;
   }
   
   .boxDelLasSavas{
