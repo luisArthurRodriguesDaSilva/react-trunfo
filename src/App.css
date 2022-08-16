@@ -38,9 +38,8 @@
   }
   
   .forme {
-    /* border: 2px solid red; */
     border: 5px solid rgba(105, 105, 105, 0.479) ;
-    border-right: 2px solid rgb(127, 129, 4) ;
+    border-right: 3px solid rgba(105, 105, 105, 0.479) ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -109,9 +108,8 @@
   }
   
   .mainCardContainer {
-    /*border: 1px solid rgb(0, 255, 221);*/
     border: 5px solid rgba(105, 105, 105, 0.479) ;
-    border-left: 2px solid rgb(5, 75, 11) ;
+    border-left:3px solid rgba(105, 105, 105, 0.479) ;
     display: flex;
     flex-direction: column;
     align-items: center;
