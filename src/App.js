@@ -144,7 +144,7 @@ class App extends React.Component {
       style={
           {
             backgroundColor:  `rgba(${1+e.cardAttr1}, ${1+ e.cardAttr2}, ${1 + e.cardAttr3},0.7)`,
-            border: `1px solid rgba(${e.cardAttr1}, ${e.cardAttr2}, ${e.cardAttr3},0.7)`,
+            border: `3px solid rgba(${e.cardAttr1}, ${e.cardAttr2}, ${e.cardAttr3},0.7)`,
           } 
         } 
       key={ e.cardName } 
