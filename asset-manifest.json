@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-trunfo/static/css/main.93a5d21f.css",
-    "main.js": "/react-trunfo/static/js/main.abb8531b.js",
+    "main.css": "/react-trunfo/static/css/main.057d0819.css",
+    "main.js": "/react-trunfo/static/js/main.7d8edde2.js",
     "static/js/787.073a8655.chunk.js": "/react-trunfo/static/js/787.073a8655.chunk.js",
     "static/media/PVi9HF.jpg": "/react-trunfo/static/media/PVi9HF.c9f5457fd344ea4d0964.jpg",
     "static/media/main_image_star-forming_region_carina_nircam_final-5mb.webp": "/react-trunfo/static/media/main_image_star-forming_region_carina_nircam_final-5mb.19b79a2530df3a8e1454.webp",
     "index.html": "/react-trunfo/index.html",
-    "main.93a5d21f.css.map": "/react-trunfo/static/css/main.93a5d21f.css.map",
-    "main.abb8531b.js.map": "/react-trunfo/static/js/main.abb8531b.js.map",
+    "main.057d0819.css.map": "/react-trunfo/static/css/main.057d0819.css.map",
+    "main.7d8edde2.js.map": "/react-trunfo/static/js/main.7d8edde2.js.map",
     "787.073a8655.chunk.js.map": "/react-trunfo/static/js/787.073a8655.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93a5d21f.css",
-    "static/js/main.abb8531b.js"
+    "static/css/main.057d0819.css",
+    "static/js/main.7d8edde2.js"
   ]
 }
