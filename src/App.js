@@ -56,7 +56,7 @@ class App extends React.Component {
   });
   }
 
-  generateKey = () => {
+  generateKey = () => { 
     const {savedCards} = this.state;
     const stringfado = JSON.stringify(savedCards);
     this.setState({
@@ -66,6 +66,10 @@ class App extends React.Component {
 
   generateTrunfo = () => {
     const { key } = this.state;
+    if(key === ''){
+      alert('chave vazia');
+    }
+    else{
     this.setState((ps) => ({
       savedCards : JSON.parse(ps.key),
       key: ''
@@ -73,6 +77,7 @@ class App extends React.Component {
       const stringfado = JSON.stringify(this.state.savedCards);
       localStorage.setItem('save_cards',stringfado)
     });
+  }
   }
 
   haveTrunfo = (savedCards) => (
@@ -260,22 +265,34 @@ class App extends React.Component {
           <div id='savedCardsContainer'>{this.LasSavasShowadas()}</div>
         </div>
         <div className='key'>
-          <button
-          onClick={this.generateKey}
-          >
-            gerar chave
-          </button>
-          <input 
-          value={key}
-          onChange={this.onInputChange}
-          placeholder='chave'
-          name='key'
-          type='text'/>
-          <button
-          onClick={this.generateTrunfo}
-          >
-            gerar trunfo
-          </button>
+          <div id='keyCima'>
+            <button
+              onClick={this.generateKey}
+            >
+              gerar chave
+            </button>
+            <input 
+              value={key}
+              onChange={this.onInputChange}
+              placeholder='chave'
+              name='key'
+              type='text'/>
+            <button
+              onClick={this.generateTrunfo}
+            >
+              gerar trunfo
+            </button>
+          </div>
+          <div id='keyBaixo'>
+            <button
+            onClick={()=>{
+              const k = this.state.key;
+              navigator.clipboard.writeText(k);
+            }
+            }>
+              copiar
+            </button>
+          </div>
         </div>
       </div>
     );
