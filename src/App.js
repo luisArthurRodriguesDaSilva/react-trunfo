@@ -23,6 +23,7 @@ class App extends React.Component {
       buscado: '',
       rareBuscada: 'todas',
       trunfoFilterMode: false,
+      key:'',
     };
   }
 
@@ -53,6 +54,25 @@ class App extends React.Component {
       const stringfado = JSON.stringify(this.state.savedCards);
     localStorage.setItem('save_cards',stringfado)
   });
+  }
+
+  generateKey = () => {
+    const {savedCards} = this.state;
+    const stringfado = JSON.stringify(savedCards);
+    this.setState({
+      key: stringfado,
+    });
+  }
+
+  generateTrunfo = () => {
+    const { key } = this.state;
+    this.setState((ps) => ({
+      savedCards : JSON.parse(ps.key),
+      key: ''
+    }),()=> {
+      const stringfado = JSON.stringify(this.state.savedCards);
+      localStorage.setItem('save_cards',stringfado)
+    });
   }
 
   haveTrunfo = (savedCards) => (
@@ -186,6 +206,7 @@ class App extends React.Component {
       buscado,
       rareBuscada,
       trunfoFilterMode,
+      key,
     } = this.state;
 
     const jaFoi = this.haveTrunfo(savedCards);
@@ -237,6 +258,24 @@ class App extends React.Component {
           />
           </div>
           <div id='savedCardsContainer'>{this.LasSavasShowadas()}</div>
+        </div>
+        <div className='key'>
+          <button
+          onClick={this.generateKey}
+          >
+            gerar chave
+          </button>
+          <input 
+          value={key}
+          onChange={this.onInputChange}
+          placeholder='chave'
+          name='key'
+          type='text'/>
+          <button
+          onClick={this.generateTrunfo}
+          >
+            gerar trunfo
+          </button>
         </div>
       </div>
     );
