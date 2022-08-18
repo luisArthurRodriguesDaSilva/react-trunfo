@@ -102,7 +102,7 @@ class Form extends Component {
             </label>
 
             <label htmlFor='cardAttr3Inp'>
-              Loucura
+              Loucura:
               <br />
             <input
               id='cardAttr3Inp'

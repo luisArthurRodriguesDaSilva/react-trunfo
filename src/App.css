@@ -107,6 +107,17 @@
     color: white;
   }
   
+  #trunfo-confirmed{
+    margin:5px;
+    border: 2px solid rgba(255, 174, 0, 0.877);
+    border-radius: 10px;
+    width: 30%;
+    height: fit-content;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+  }
+
   .mainCardContainer {
     border: 5px solid rgba(105, 105, 105, 0.479) ;
     border-left:3px solid rgba(105, 105, 105, 0.479) ;
