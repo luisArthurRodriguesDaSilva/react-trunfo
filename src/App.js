@@ -60,7 +60,7 @@ class App extends React.Component {
     const {savedCards} = this.state;
     const stringfado = JSON.stringify(savedCards);
     this.setState({
-      key: stringfado,
+      key: btoa(stringfado),
     });
   }
 
@@ -70,15 +70,19 @@ class App extends React.Component {
       alert('chave vazia');
     }
     else{
+      try{
+    const newSavedCard = JSON.parse(atob(key));
     this.setState((ps) => ({
-      savedCards : JSON.parse(ps.key),
+      savedCards : newSavedCard,
       key: ''
     }),()=> {
       const stringfado = JSON.stringify(this.state.savedCards);
       localStorage.setItem('save_cards',stringfado)
     });
+  }catch(e){
+    alert('chave invalida');
   }
-  }
+  }}
 
   haveTrunfo = (savedCards) => (
     savedCards.some((card) => (card.cardTrunfo))
