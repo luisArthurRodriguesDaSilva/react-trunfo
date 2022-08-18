@@ -278,7 +278,9 @@ class App extends React.Component {
               onChange={this.onInputChange}
               placeholder='chave'
               name='key'
-              type='text'/>
+              type='text'
+              className='arredondar'
+            />
             <button
             class="keyBtn"
             id="generateTrunfoBtn"

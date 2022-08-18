@@ -5,9 +5,13 @@ class FilterRare extends Component {
   render() {
     const { rareBuscada, onInputChange, trunfoFilterMode } = this.props;
     return (
+      <label htmlFor="rare-filter">
+        <span id="rareFilterText">raridade: </span>
       <select
         disabled={ trunfoFilterMode }
+        id="rare-filter"
         data-testid="rare-filter"
+        className="arredondar"
         name="rareBuscada"
         value={ rareBuscada }
         onChange={ onInputChange }
@@ -18,6 +22,7 @@ class FilterRare extends Component {
         <option value="muito raro">muito raro</option>
 
       </select>
+      </label>
     );
   }
 }

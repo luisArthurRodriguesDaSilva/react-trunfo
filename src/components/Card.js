@@ -65,7 +65,7 @@ class Card extends Component {
               id="" 
               data-testid="attr2-card">{cardAttr2}</h4></div>
           <div className='attr-container'>
-            <p>sla: </p>
+            <p>Loucura: </p>
             <h4 
               style={ 
                       {

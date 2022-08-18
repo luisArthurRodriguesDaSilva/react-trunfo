@@ -8,6 +8,7 @@ class FilterName extends Component {
     <>
       <label htmlFor='nameFilter>'>
         <input
+          className='arredondar'
           disabled={ trunfoFilterMode }
           placeholder="Buscar por ..."
           id="nameFilter"
