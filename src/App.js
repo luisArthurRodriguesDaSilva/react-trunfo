@@ -264,9 +264,11 @@ class App extends React.Component {
           </div>
           <div id='savedCardsContainer'>{this.LasSavasShowadas()}</div>
         </div>
-        <div className='key'>
+        <div className='key-container'>
           <div id='keyCima'>
             <button
+            class="keyBtn"
+            id="generateKeyBtn"
               onClick={this.generateKey}
             >
               gerar chave
@@ -278,6 +280,8 @@ class App extends React.Component {
               name='key'
               type='text'/>
             <button
+            class="keyBtn"
+            id="generateTrunfoBtn"
               onClick={this.generateTrunfo}
             >
               gerar trunfo
@@ -285,6 +289,8 @@ class App extends React.Component {
           </div>
           <div id='keyBaixo'>
             <button
+            class="keyBtn"
+            id="copyKeyBtn"
             onClick={()=>{
               const k = this.state.key;
               navigator.clipboard.writeText(k);

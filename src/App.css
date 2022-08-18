@@ -251,3 +251,48 @@
     height: 30px;
     font-size: larger;
   }
+
+  .key-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyBtn{
+    margin:5px;
+    font-size: larger;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    color: white;
+  }
+
+  #generateTrunfoBtn{
+    background-color: rgb(11, 192, 80);
+  }
+
+  #generateKeyBtn{
+    background-color: rgb(4, 44, 129);
+  }
+
+  #copyKeyBtn{
+    background-color: rgb(27, 49, 56);
+  }
+
+  .keyBtn:hover{
+    color: rgba(155, 151, 145, 0.5);
+    box-shadow: 1px 1px 3px rgba(229, 255, 0, 0.527);
+  }
+
+  .keyBtn:active{
+    color: rgba(229, 255, 0, 0.527);
+  }
+
+  #copyKeyBtn:hover{
+    color: rgba(0, 255, 221, 0.274);
+    box-shadow: 1px 1px 3px rgba(0, 255, 221, 0.274);
+  }
+
+  #copyKeyBtn:active{
+    color: rgba(0, 255, 221, 0.5);
+  }
