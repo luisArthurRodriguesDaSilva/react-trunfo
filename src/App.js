@@ -27,6 +27,10 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount(){
+    document.title = "crie seu trunfo";
+  }
+
   saveCard = ({
     cardName,
     cardDescription,

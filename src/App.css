@@ -211,12 +211,6 @@
     left: 1px;
   }
 
-
-
-  .boxDelLasSavas {
-    border: 1px solid black;
-  }
-
   #filters{
     display: flex;
     justify-content: space-around;
@@ -225,7 +219,6 @@
   
   .lasSavas {
     border-radius: 10px;
-    box-sizing: border-box;
   }
   
   .boxDelLasSavas{
