@@ -76,7 +76,7 @@ class App extends React.Component {
     else{
       try{
     const newSavedCard = JSON.parse(atob(key));
-    this.setState((ps) => ({
+    this.setState(() => ({
       savedCards : newSavedCard,
       key: ''
     }),()=> {
@@ -153,7 +153,7 @@ class App extends React.Component {
       savedCards: ps.savedCards.filter((carde) => (carde.cardName !== cardName)),
     }),()=>{
       const stringfado = JSON.stringify(this.state.savedCards);
-    localStorage.setItem('save_cards',stringfado)
+      localStorage.setItem('save_cards',stringfado)
   });
   }
 
@@ -275,7 +275,7 @@ class App extends React.Component {
         <div className='key-container'>
           <div id='keyCima'>
             <button
-            class="keyBtn"
+            className="keyBtn"
             id="generateKeyBtn"
               onClick={this.generateKey}
             >
@@ -290,7 +290,7 @@ class App extends React.Component {
               className='arredondar'
             />
             <button
-            class="keyBtn"
+            className="keyBtn"
             id="generateTrunfoBtn"
               onClick={this.generateTrunfo}
             >
@@ -299,7 +299,7 @@ class App extends React.Component {
           </div>
           <div id='keyBaixo'>
             <button
-            class="keyBtn"
+            className="keyBtn"
             id="copyKeyBtn"
             onClick={()=>{
               const k = this.state.key;
