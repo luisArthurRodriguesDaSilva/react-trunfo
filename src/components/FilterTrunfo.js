@@ -7,12 +7,11 @@ class FilterTrunfo extends Component {
     return (
       <label id="trufo-filter-container" htmlFor="onlyTrunfo">
         <input
-          type="checkbox"
-          id="onlyTrunfo"
-          data-testid="trunfo-filter"
-          name="trunfoFilterMode"
-          checked={ trunfoFilterMode }
-          value={ trunfoFilterMode }
+        type="checkbox"
+        id="onlyTrunfo"
+        data-testid="trunfo-filter"
+        name="trunfoFilterMode"
+        checked={ trunfoFilterMode }          value={ trunfoFilterMode }
           onChange={ onInputChange }
           onClick={ onInputChange }
         />
