@@ -279,12 +279,12 @@ class App extends React.Component {
             id="generateKeyBtn"
               onClick={this.generateKey}
             >
-              gerar chave
+              gerar t-Key
             </button>
             <input 
               value={key}
               onChange={this.onInputChange}
-              placeholder='chave'
+              placeholder='t-key'
               name='key'
               type='text'
               className='arredondar'
